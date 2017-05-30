@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    go-micro-protoc:
+        image: daocloud.io/jsongo/go-protoc
+        container_name: go-micro-protoc
+        #environment:
+            #- MYSQL_USER=super_camera
+        # volumes:
+        #     - .:/src
+        command: protoc
