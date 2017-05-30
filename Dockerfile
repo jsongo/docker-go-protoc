@@ -10,6 +10,6 @@ RUN mkdir -p /go/src
 ENV GOPATH /go
 ENV PATH $PATH:$GOPATH/bin
 
-RUN go get github.com/micro/protobuf/{proto,protoc-gen-go}
+RUN go get github.com/micro/protobuf/proto
 
 RUN apk del git
