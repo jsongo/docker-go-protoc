@@ -2,16 +2,11 @@ FROM alpine:3.6
 
 MAINTAINER jsongo <jsongo@qq.com>
 
-RUN apk add --update go
-RUN apk add --update git
+ENV PROTOBUF_TAG v3.3.1
 
-RUN mkdir -p /go/src
+RUN ./build.sh
 
 ENV GOPATH /go
 ENV PATH $PATH:$GOPATH/bin
-
-RUN apk add --update libstdc++
-RUN go get github.com/micro/protobuf/proto
 # RUN go get github.com/micro/protobuf/protoc-gen-go
 
-RUN apk del git
