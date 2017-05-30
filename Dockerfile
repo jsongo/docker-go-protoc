@@ -11,5 +11,6 @@ ENV GOPATH /go
 ENV PATH $PATH:$GOPATH/bin
 
 RUN go get github.com/micro/protobuf/proto
+RUN go get github.com/micro/protobuf/protoc-gen-go
 
 RUN apk del git
