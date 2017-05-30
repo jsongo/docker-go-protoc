@@ -4,6 +4,9 @@ MAINTAINER jsongo <jsongo@qq.com>
 
 ENV PROTOBUF_TAG v3.3.1
 
+ADD . /src
+WORKDIR /src
+
 RUN ./build.sh
 
 ENV GOPATH /go
